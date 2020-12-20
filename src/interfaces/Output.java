@@ -16,6 +16,6 @@ public interface Output {
         System.out.println(job + " " + name + ": This week's news: The bank was robbed. There are 3 trials going on");
     }
     default void printPoster() {
-        System.out.println("Poster: The shorties won't be sorry. and they won't waste their money if they buy shares in the giant plant society, one furling a piece!");
+        System.out.println("Poster: The shorties won't be sorry. And they won't waste their money if they buy shares in the giant plant society, one furling a piece!");
     }
 }
