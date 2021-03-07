@@ -17,7 +17,7 @@ public class Kuks extends Actor implements Output, Teller {
 
     protected void doWork(){
         if ((thing2 != null) && (nextActor != null) && (thing2.getCondition() == Status.SENT)) {
-            location = Location.СOURT; // changes location
+            location = Location.COURT; // changes location
             go(job, name, location);
 
             nextActor.condition = Status.SAD;

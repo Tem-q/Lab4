@@ -28,6 +28,7 @@ public class Thing implements Condition {
     public Status getCondition() {
         return condition;
     }
+
     @Override
     public void setLocation(Location location){
         this.location = location;

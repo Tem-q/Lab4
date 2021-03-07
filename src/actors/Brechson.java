@@ -22,7 +22,7 @@ public class Brechson extends Actor implements Output, Teller {
             thing.setLocation(Location.NEWS); // changes location og thing
             changething(thing);
 
-            location = Location.СOURT; // changes location
+            location = Location.COURT; // changes location
             go(job, name, location);
 
             nextActor.condition = Status.HAPPY; // changes condition of the next Actor

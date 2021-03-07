@@ -1,225 +1,144 @@
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.util.InputMismatchException;
-import java.util.NoSuchElementException;
-import java.util.Scanner;
+import actors.*;
+import actors.exceptions.*;
+import actors.things.*;
+import enumerations.*;
 
-/**
- * @author Kurovskiy Artem R3136
- * This is the main class
- */
 public class Laba {
-    private static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
-        help();
-        DragonCollection dragonCollection = new DragonCollection();
-
-        Reader reader = new Reader();
-        while (true) {
-            try {
-                try {
-                    reader.readFile(dragonCollection);
-                    break;
-                } catch (NullPointerException e) {
-                    System.out.println("Enter the name of file");
-                    String fileName = scanner.nextLine();
-                    reader.setFileWay(fileName);
-                    reader.readFile(dragonCollection);
-                }
-            } catch (FileNotFoundException e) {
-                System.out.println(e.getMessage());
-                System.out.println("Enter the name of file");
-                String fileName = scanner.nextLine();
-                reader.setFileWay(fileName);
-            } catch (IOException e) {
-                System.out.println(e.getMessage());
-            } catch (NoSuchElementException e) {
-                System.out.println("Unknown command");
-            }
+        Mafia mafia = new Mafia("Boris", Location.MAFIA_HOME, TypeOfJob.CRIMINAL_ACTIVITY, Status.NEUTRAL);
+        Banker banker = new Banker("Ilya", Location.BANK, TypeOfJob.BANKER, Status.HAPPY);
+        Pschigl pschigl = new Pschigl("Pschigl", Location.STREET, TypeOfJob.POLICE_OFFICER, Status.HAPPY);
+        Digl digl = new Digl("Digl", Location.STREET, TypeOfJob.POLICEMAN, Status.HAPPY);
+        Gigl gigl = new Gigl("Gigl", Location.STREET, TypeOfJob.POLICEMAN, Status.HAPPY);
+        Spigl spigl = new Spigl("Spigl", Location.STREET, TypeOfJob.POLICEMAN, Status.HAPPY);
+        Psigl psigl = new Psigl("Psigl", Location.STREET, TypeOfJob.POLICEMAN, Status.HAPPY);
+        Builder builder = new Builder("Vova", Location.STREET, TypeOfJob.BUILDER, Status.NEUTRAL);
+        Designer designer = new Designer("Anna",  Location.STREET, TypeOfJob.DESIGNER, Status.NEUTRAL);
+        TVpresenter tVpresenter = new TVpresenter("", Location.NEWS, TypeOfJob.TV_PRESENTER, Status.NEUTRAL);
+        Kuks kuks = new Kuks("Kuks", Location.KUKS_HOME, TypeOfJob.OWNER, Status.HAPPY);
+        Kaktus kaktus = new Kaktus("Kaktus", Location.KUKS_HOME, TypeOfJob.LODGER, Status.HAPPY);
+        Eduard eduard = new Eduard("Eduard", Location.NEWS, TypeOfJob.EDITOR, Status.NEUTRAL);
+        Miga miga = new Miga("Miga", Location.OFFICE, TypeOfJob.BUSINESSMAN, Status.HAPPY);
+        Brechson brechson = new Brechson("Brechson", Location.BRECHSON_HOME, TypeOfJob.FILM_CRITIC, Status.NEUTRAL);
+        Davilons davilons = new Davilons("Davilons", Location.STREET, TypeOfJob.BIKER, Status.NEUTRAL);
+        GasolineDealers gasolineDealers = new GasolineDealers("Lukoil", Location.STREET, TypeOfJob.SELL_GASOLINE, Status.HAPPY);
+        Poodle poodle = new Poodle("Poodle", Location.STREET, TypeOfJob.MAKE_AUTO_TIRE, Status.NEUTRAL);
+        Bald[] bald = new Bald[5];
+        for (int i = 0; i < 5; i++) {
+            int j = i+1;
+            bald[i] = new Bald("Bald" + j, Location.STREET, TypeOfJob.FREELANCER ,Status.NEUTRAL);
         }
 
+        Money money = new Money("Money", Location.BANK, Status.NOT_GIVEN);
+        Letter letter = new Letter("Letter", Location.BRECHSON_HOME, Status.NOT_SENT);
+        AutoTire autotire = new AutoTire("Auto tire", Location.STREET, Status.OK);
+        House house = new House("House of Kuks", Location.KUKS_HOME, Status.OK);
+        House.Wall wall = house.new Wall("Wall", Location.KUKS_HOME, Status.OK);
+        Newspaper newspaper = new Newspaper("Newspaper", Location.NEWS, Status.NOT_READY);
+        Newspaper.Article article = newspaper.new Article("Article", Location.NEWS, Status.NOT_READY);
+        Poster poster = new Poster("Poster", Location.NEWS, Status.NOT_READY);
 
+        Court court = new Court();
+        Story story = new Story();
 
-        System.out.println("Enter the command please");
-        boolean param = true;
+        story.addActor(mafia); // adding actors to a story
+        story.addActor(banker);
+        story.addActor(brechson);
+        story.addActor(pschigl);
+        story.addActor(digl);
+        story.addActor(gigl);
+        story.addActor(psigl);
+        story.addActor(spigl);
+        story.addActor(builder);
+        story.addActor(kuks);
+        story.addActor(kaktus);
+        story.addActor(eduard);
+        story.addActor(davilons);
+        story.addActor(gasolineDealers);
+        story.addActor(poodle);
+
+        banker.addThing(money); // adding things to the actors
+        brechson.addThing(letter);
+        brechson.addThing2(money);
+        pschigl.addThing2(letter);
+        digl.addThing2(letter);
+        gigl.addThing2(letter);
+        psigl.addThing2(letter);
+        spigl.addThing2(letter);
+        builder.addThing(wall);
+        builder.addThing2(letter);
+        kuks.addThing2(letter);
+        kaktus.addThing2(letter);
+        eduard.addThing(newspaper);
+        eduard.addThing2(letter);
+        davilons.addThing(autotire);
+        davilons.addThing2(letter);
+        poodle.addThing(autotire);
+        poodle.addThing2(letter);
+        miga.addThing(article);
+        miga.addThing2(letter);
+        designer.addThing(poster);
+        designer.addThing2(letter);
+        tVpresenter.addThing2(article);
+        court.addThing(letter);
+
+        mafia.addActor(banker); //adding next Actor to do something with him
+        banker.addActor(brechson);
+        pschigl.addActor(bald[0]);
+        digl.addActor(bald[1]);
+        gigl.addActor(bald[2]);
+        psigl.addActor(bald[3]);
+        spigl.addActor(bald[4]);
+        builder.addActor(kuks);
+        kuks.addActor(kaktus);
+        kaktus.addActor(eduard);
+        brechson.addActor(davilons);
+        davilons.addActor(gasolineDealers);
+        gasolineDealers.addActor(poodle);
+        miga.addActor(designer);
+
         try {
-            String[] parametrs = new String[]{"",""};
-            String task = scanner.nextLine();
-            parametrs = dragonCollection.checkTask(task, parametrs);
-            task = parametrs[0];
-            while (param) {
-                switch (task) {
-                    case "help":
-                        help();
-                        break;
-                    case "info":
-                        dragonCollection.info();
-                        break;
-                    case "show":
-                        dragonCollection.show();
-                        if (dragonCollection.collectionSize() == 0) {
-                            System.out.println("Collection is empty");
-                        }
-                        break;
-                    case "add":
-                        dragonCollection.add(scanner, "add", 0);
-                        break;
-                    case "update":
-                        if (dragonCollection.collectionSize() > 0) {
-                            System.out.println("Enter the id to update the element. The id must be int type");
-                            int updateId = 0;
-                            while (true) {
-                                try {
-                                    updateId = scanner.nextInt();
-                                    if (dragonCollection.checkIdForExistence(updateId)) {
-                                        dragonCollection.removeById(updateId);
-                                        dragonCollection.add(scanner, "update", updateId);
-                                        break;
-                                    } else {
-                                        System.out.println("There is no dragon with this id in the collection");
-                                        scanner.nextLine();
-                                        break;
-                                    }
-                                } catch (InputMismatchException e) {
-                                    System.out.println("The id must be int type. Try again");
-                                    scanner.nextLine();
-                                }
-                            }
-                        } else {
-                            System.out.println("Collection is empty");
-                        }
-                        break;
-                    case "remove_by_id":
-                        if (dragonCollection.collectionSize() > 0) {
-                            System.out.println("Enter the id of dragon. The id must be int type");
-                            int id = 0;
-                            while (true) {
-                                if (scanner.hasNextInt()) {
-                                    id = scanner.nextInt();
-                                    break;
-                                } else {
-                                    System.out.println("The id must be int type. Try again");
-                                    scanner.nextLine();
-                                }
-                            }
-                            if (dragonCollection.checkIdForExistence(id)) {
-                                dragonCollection.removeById(id);
-                            } else {
-                                System.out.println("There is no dragon with this id in the collection");
-                            }
-                            scanner.nextLine();
-                        } else {
-                            System.out.println("Collection is already empty");
-                        }
-                        break;
-                    case "clear":
-                        dragonCollection.clear();
-                        break;
-                    case "save":
-                        dragonCollection.save();
-                        break;
-                    case "execute_script":
-                        param = dragonCollection.executeScript(parametrs[1]);
-                        break;
-                    case "exit":
-                        param = false;
-                        break;
-                    case "head":
-                        dragonCollection.head();
-                        break;
-                    case "remove_head":
-                        dragonCollection.removeHead();
-                        break;
-                    case "add_if_max":
-                        System.out.println("Enter the weight to add the element. The weight must be int type");
-                        int addIfMaxWeight = 0;
-                        while (true) {
-                            try {
-                                addIfMaxWeight = scanner.nextInt();
-                                if (dragonCollection.checkWeightIfMax(addIfMaxWeight)) {
-                                    dragonCollection.add(scanner, "add_if_max", addIfMaxWeight);
-                                    break;
-                                } else {
-                                    System.out.println("The weight of this dragon is not the maximum");
-                                    scanner.nextLine();
-                                    break;
-                                }
-                            } catch (InputMismatchException e) {
-                                System.out.println("The weight must be int type. Try again");
-                                scanner.nextLine();
-                            }
-                        }
-                        break;
-                    case "sum_of_age":
-                        if (dragonCollection.collectionSize() > 0) {
-                            dragonCollection.sumOfAge();
-                        } else {
-                            System.out.println("Collection is empty");
-                        }
-                        break;
-                    case "filter_contains_name":
-                        if (dragonCollection.collectionSize() > 0) {
-                            System.out.println("Please enter the name");
-                            String name = scanner.nextLine();
-                            dragonCollection.filterContainsName(name);
-                        } else {
-                            System.out.println("Collection is empty");
-                        }
-                        break;
-                    case "filter_less_than_age":
-                        if (dragonCollection.collectionSize() > 0) {
-                            System.out.println("Please enter the age. The age must be long type");
-                            long age = 0;
-                            while (true) {
-                                if (scanner.hasNextLong()) {
-                                    age = scanner.nextLong();
-                                    break;
-                                } else {
-                                    System.out.println("The age must be long type. try again");
-                                    scanner.nextLine();
-                                }
-                            }
-                            dragonCollection.filterLessThanAge(age);
-                            scanner.nextLine();
-                        } else {
-                            System.out.println("Collection is empty");
-                        }
-                        break;
-                    default:
-                        System.out.println("Unknown command. Please try again");
-                }
-                if (param) {
-                    System.out.println("Enter a command please");
-                    task = scanner.nextLine();
-                    parametrs = dragonCollection.checkTask(task, parametrs);
-                    task = parametrs[0];
-                }
-            }
-        } catch (NoSuchElementException e) {
-            System.exit(0);
+            story.storyline(); // start the story
+        } catch (MoneyIsNotGivenException e) {
+            System.out.println(e.getMessage());
         }
-    }
 
-    /**
-     * Method prints the legend
-     */
-    public static void help() {
-        System.out.println("List of available commands: \n"
-                + "help: display help for available commands \n"
-                + "info: display information about the collection \n"
-                + "show: display all the elements of the collection \n"
-                + "add: add a new element to the collection \n"
-                + "update: update the value of a collection element by its id \n"
-                + "remove_by_id: delete an element from the collection by its id \n"
-                + "clear: clear the collection \n"
-                + "save: save the collection to a file \n"
-                + "execute_script: execute the script from the specified file \n"
-                + "exit: end the program (without saving it to a file) \n"
-                + "head: print the first element of the collection \n"
-                + "remove_head: print the first element of the collection and delete it \n"
-                + "add_if_max: add a new element to the collection if its value exceeds the value of the largest element in this collection \n"
-                + "sum_of_age: print the sum of the values of the age field for all the elements of the collection \n"
-                + "filter_contains_name: print elements whose name field value contains the specified substring \n"
-                + "filter_less_than_age: print elements whose age field value is less than the specified value");
+        court.addTeller(kuks); // adding witness to first Court
+        court.addTeller(kaktus);
+        try {
+            court.trial(); // start the first trial
+        } catch (LetterIsNotSentException e) {
+            System.out.println(e.getMessage());
+        }
+
+        court.addTeller(kaktus); // adding witness to second Court
+        court.addTeller(eduard);
+        try {
+            court.trial(); // start the second trial
+        } catch (LetterIsNotSentException e) {
+            System.out.println(e.getMessage());
+        }
+
+        court.addTeller(gasolineDealers); // adding witness to third Court
+        court.addTeller(poodle);
+        court.addTeller(brechson);
+        court.addTeller(davilons);
+        try {
+            court.trial(); // start the third trial
+        } catch (LetterIsNotSentException e) {
+            System.out.println(e.getMessage());
+        }
+
+        story.addActor(tVpresenter);
+        story.addActor(miga);
+        story.addActor(designer);
+
+        try {
+            story.storyline(); // start the story
+        } catch (MoneyIsNotGivenException e) {
+            System.out.println(e.getMessage());
+        }
+
+        System.out.println("The end.");
     }
 }

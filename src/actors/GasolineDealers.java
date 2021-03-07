@@ -18,7 +18,7 @@ public class GasolineDealers extends Actor implements Output, Teller {
 
     protected void doWork(){
         if ((nextActor != null) && (condition == Status.SAD)) {
-            location = Location.СOURT; // changes location
+            location = Location.COURT; // changes location
             go(job, name, location);
         }
     }

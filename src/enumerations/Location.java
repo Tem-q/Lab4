@@ -2,7 +2,7 @@ package enumerations;
 
 public enum Location { // all locations:
     STREET ("Street"),
-    СOURT ("Court"),
+    COURT ("Court"),
     NEWS ("Newspaper"),
     BANK ("Bank"),
     POLICE_DEPARTMENT ("Police department"),
