@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="437.0" y="1147.0">enumerations.Location</node>
+    <node x="1831.8571428571431" y="204.5">interfaces.Output</node>
+    <node x="895.0" y="776.5">actors.Miga</node>
+    <node x="3169.0" y="1003.0">actors.Digl</node>
+    <node x="1039.3333333333335" y="248.5">interfaces.Teller</node>
+    <node x="584.0" y="776.5">actors.Brechson</node>
+    <node x="2307.0" y="1003.0">actors.Spigl</node>
+    <node x="881.0" y="1147.0">interfaces.Condition</node>
+    <node x="1833.0000000000002" y="776.5">actors.Eduard</node>
+    <node x="2550.131956845238" y="0.0">interfaces.Adder</node>
+    <node x="231.0" y="1147.0">enumerations.Status</node>
+    <node x="2676.381956845238" y="138.0">actors.Court</node>
+    <node x="3034.0" y="787.5">actors.Designer</node>
+    <node x="2885.0" y="1003.0">actors.Gigl</node>
+    <node x="3643.0" y="787.5">actors.TVpresenter</node>
+    <node x="287.0" y="765.0">actors.Kaktus</node>
+    <node x="1533.0000000000002" y="776.5">actors.Poodle</node>
+    <node x="1337.0" y="1147.0">actors.exceptions.MoneyIsNotGivenException</node>
+    <node x="1052.0" y="1147.0">actors.exceptions.LetterIsNotSentException</node>
+    <node x="0.0" y="776.5">actors.Kuks</node>
+    <node x="3344.0" y="787.5">actors.Banker</node>
+    <node x="0.0" y="1147.0">enumerations.TypeOfJob</node>
+    <node x="657.0" y="1147.0">actors.Story</node>
+    <node x="3969.0" y="787.5">actors.Builder</node>
+    <node x="2441.0" y="787.5">actors.Mafia</node>
+    <node x="1185.0000000000002" y="776.5">actors.GasolineDealers</node>
+    <node x="2384.381956845238" y="126.0">actors.Actor</node>
+    <node x="2734.0" y="787.5">actors.Pschigl</node>
+    <node x="2597.0" y="1003.0">actors.Psigl</node>
+    <node x="2133.0" y="776.5">actors.Davilons</node>
+    <node x="4269.0" y="787.5">actors.Bald</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="actors.Kuks" target="interfaces.Teller">
+      <point x="-89.0" y="-82.5" />
+      <point x="44.5" y="575.0" />
+      <point x="1045.6458333333335" y="575.0" />
+      <point x="-44.1875" y="27.0" />
+    </edge>
+    <edge source="actors.TVpresenter" target="interfaces.Output">
+      <point x="-76.5" y="-71.5" />
+      <point x="3719.5" y="485.0" />
+      <point x="2103.2857142857147" y="485.0" />
+      <point x="119.42857142857156" y="71.0" />
+    </edge>
+    <edge source="actors.Kaktus" target="interfaces.Output">
+      <point x="0.0" y="-94.0" />
+      <point x="425.5" y="625.0" />
+      <point x="1864.4285714285718" y="625.0" />
+      <point x="-119.42857142857133" y="71.0" />
+    </edge>
+    <edge source="actors.Banker" target="actors.Actor">
+      <point x="69.75" y="-71.5" />
+      <point x="3553.25" y="495.0" />
+      <point x="2592.9152901785715" y="495.0" />
+      <point x="72.5333333333333" y="149.5" />
+    </edge>
+    <edge source="actors.Miga" target="interfaces.Teller">
+      <point x="-90.0" y="-82.5" />
+      <point x="940.0" y="605.0" />
+      <point x="1083.5208333333335" y="605.0" />
+      <point x="-6.3125" y="27.0" />
+    </edge>
+    <edge source="actors.Poodle" target="interfaces.Output">
+      <point x="0.0" y="-82.5" />
+      <point x="1673.0000000000002" y="665.0" />
+      <point x="1951.2857142857144" y="665.0" />
+      <point x="-32.57142857142867" y="71.0" />
+    </edge>
+    <edge source="actors.Gigl" target="actors.Pschigl">
+      <point x="0.0" y="-49.5" />
+      <point x="3017.0" y="983.0" />
+      <point x="2909.0" y="983.0" />
+      <point x="35.0" y="71.5" />
+    </edge>
+    <edge source="actors.Kaktus" target="interfaces.Teller">
+      <point x="-92.33333333333348" y="-94.0" />
+      <point x="333.1666666666665" y="585.0" />
+      <point x="1058.2708333333335" y="585.0" />
+      <point x="-31.5625" y="27.0" />
+    </edge>
+    <edge source="actors.Actor" target="interfaces.Adder">
+      <point x="0.0" y="-149.5" />
+      <point x="2520.381956845238" y="101.0" />
+      <point x="2598.381956845238" y="101.0" />
+      <point x="-48.25" y="38.0" />
+    </edge>
+    <edge source="actors.Miga" target="interfaces.Output">
+      <point x="0.0" y="-82.5" />
+      <point x="1030.0" y="645.0" />
+      <point x="1907.8571428571431" y="645.0" />
+      <point x="-76.0" y="71.0" />
+    </edge>
+    <edge source="actors.GasolineDealers" target="interfaces.Output">
+      <point x="0.0" y="-82.5" />
+      <point x="1349.0000000000002" y="655.0" />
+      <point x="1929.571428571429" y="655.0" />
+      <point x="-54.28571428571422" y="71.0" />
+    </edge>
+    <edge source="actors.Eduard" target="interfaces.Teller">
+      <point x="-93.33333333333326" y="-82.5" />
+      <point x="1879.666666666667" y="585.0" />
+      <point x="1121.3958333333335" y="585.0" />
+      <point x="31.5625" y="27.0" />
+    </edge>
+    <edge source="actors.Eduard" target="interfaces.Output">
+      <point x="0.0" y="-82.5" />
+      <point x="-10.85714285714289" y="71.0" />
+    </edge>
+    <edge source="actors.Davilons" target="actors.Actor">
+      <point x="96.0" y="-82.5" />
+      <point x="2373.0" y="745.0" />
+      <point x="2520.381956845238" y="745.0" />
+      <point x="0.0" y="149.5" />
+    </edge>
+    <edge source="actors.Court" target="interfaces.Adder">
+      <point x="0.0" y="-137.5" />
+      <point x="2772.881956845238" y="101.0" />
+      <point x="2694.881956845238" y="101.0" />
+      <point x="48.25" y="38.0" />
+    </edge>
+    <edge source="actors.Spigl" target="actors.Pschigl">
+      <point x="0.0" y="-49.5" />
+      <point x="2442.0" y="973.0" />
+      <point x="2769.0" y="973.0" />
+      <point x="-105.0" y="71.5" />
+    </edge>
+    <edge source="actors.Davilons" target="interfaces.Teller">
+      <point x="-96.0" y="-82.5" />
+      <point x="2181.0" y="575.0" />
+      <point x="1134.0208333333335" y="575.0" />
+      <point x="44.1875" y="27.0" />
+    </edge>
+    <edge source="actors.Mafia" target="interfaces.Output">
+      <point x="-68.25" y="-71.5" />
+      <point x="2509.25" y="555.0" />
+      <point x="2016.4285714285716" y="555.0" />
+      <point x="32.57142857142844" y="71.0" />
+    </edge>
+    <edge source="actors.Davilons" target="interfaces.Output">
+      <point x="0.0" y="-82.5" />
+      <point x="2277.0" y="565.0" />
+      <point x="1994.714285714286" y="565.0" />
+      <point x="10.85714285714289" y="71.0" />
+    </edge>
+    <edge source="actors.Builder" target="actors.Actor">
+      <point x="70.0" y="-71.5" />
+      <point x="4179.0" y="455.0" />
+      <point x="2629.181956845238" y="455.0" />
+      <point x="108.79999999999973" y="149.5" />
+    </edge>
+    <edge source="actors.Designer" target="actors.Actor">
+      <point x="72.5" y="-71.5" />
+      <point x="3251.5" y="515.0" />
+      <point x="2574.7819568452383" y="515.0" />
+      <point x="54.40000000000009" y="149.5" />
+    </edge>
+    <edge source="actors.Kaktus" target="actors.Actor">
+      <point x="92.33333333333303" y="-94.0" />
+      <point x="517.833333333333" y="685.0" />
+      <point x="2411.581956845238" y="685.0" />
+      <point x="-108.80000000000018" y="149.5" />
+    </edge>
+    <edge source="actors.Designer" target="interfaces.Output">
+      <point x="-72.5" y="-71.5" />
+      <point x="3106.5" y="525.0" />
+      <point x="2059.857142857143" y="525.0" />
+      <point x="76.0" y="71.0" />
+    </edge>
+    <edge source="actors.Kuks" target="interfaces.Output">
+      <point x="0.0" y="-82.5" />
+      <point x="133.5" y="615.0" />
+      <point x="1842.714285714286" y="615.0" />
+      <point x="-141.1428571428571" y="71.0" />
+    </edge>
+    <edge source="actors.Builder" target="interfaces.Output">
+      <point x="-70.0" y="-71.5" />
+      <point x="4039.0" y="465.0" />
+      <point x="2125.0" y="465.0" />
+      <point x="141.1428571428571" y="71.0" />
+    </edge>
+    <edge source="actors.Brechson" target="interfaces.Teller">
+      <point x="-97.0" y="-82.5" />
+      <point x="632.5" y="595.0" />
+      <point x="1070.8958333333335" y="595.0" />
+      <point x="-18.9375" y="27.0" />
+    </edge>
+    <edge source="actors.Miga" target="actors.Actor">
+      <point x="90.0" y="-82.5" />
+      <point x="1120.0" y="705.0" />
+      <point x="2447.848623511905" y="705.0" />
+      <point x="-72.5333333333333" y="149.5" />
+    </edge>
+    <edge source="actors.Bald" target="actors.Actor">
+      <point x="0.0" y="-71.5" />
+      <point x="4402.5" y="445.0" />
+      <point x="2647.3152901785716" y="445.0" />
+      <point x="126.9333333333334" y="149.5" />
+    </edge>
+    <edge source="actors.Banker" target="interfaces.Output">
+      <point x="-69.75" y="-71.5" />
+      <point x="3413.75" y="505.0" />
+      <point x="2081.571428571429" y="505.0" />
+      <point x="97.71428571428578" y="71.0" />
+    </edge>
+    <edge source="actors.Brechson" target="interfaces.Output">
+      <point x="0.0" y="-82.5" />
+      <point x="729.5" y="635.0" />
+      <point x="1886.1428571428573" y="635.0" />
+      <point x="-97.71428571428578" y="71.0" />
+    </edge>
+    <edge source="actors.Kuks" target="actors.Actor">
+      <point x="89.0" y="-82.5" />
+      <point x="222.5" y="675.0" />
+      <point x="2393.4486235119048" y="675.0" />
+      <point x="-126.9333333333334" y="149.5" />
+    </edge>
+    <edge source="actors.Eduard" target="actors.Actor">
+      <point x="93.33333333333326" y="-82.5" />
+      <point x="2066.3333333333335" y="735.0" />
+      <point x="2502.248623511905" y="735.0" />
+      <point x="-18.133333333333212" y="149.5" />
+    </edge>
+    <edge source="actors.Psigl" target="actors.Pschigl">
+      <point x="0.0" y="-49.5" />
+      <point x="2731.0" y="983.0" />
+      <point x="2839.0" y="983.0" />
+      <point x="-35.0" y="71.5" />
+    </edge>
+    <edge source="actors.Mafia" target="actors.Actor">
+      <point x="68.25" y="-71.5" />
+      <point x="2645.75" y="745.0" />
+      <point x="2538.5152901785714" y="745.0" />
+      <point x="18.133333333333212" y="149.5" />
+    </edge>
+    <edge source="actors.GasolineDealers" target="interfaces.Teller">
+      <point x="-109.33333333333348" y="-82.5" />
+      <point x="1239.6666666666667" y="605.0" />
+      <point x="1096.1458333333335" y="605.0" />
+      <point x="6.3125" y="27.0" />
+    </edge>
+    <edge source="actors.GasolineDealers" target="actors.Actor">
+      <point x="109.33333333333348" y="-82.5" />
+      <point x="1458.3333333333337" y="715.0" />
+      <point x="2465.981956845238" y="715.0" />
+      <point x="-54.40000000000009" y="149.5" />
+    </edge>
+    <edge source="actors.Digl" target="actors.Pschigl">
+      <point x="0.0" y="-49.5" />
+      <point x="3301.5" y="973.0" />
+      <point x="2979.0000000000005" y="973.0" />
+      <point x="105.00000000000023" y="71.5" />
+    </edge>
+    <edge source="actors.Pschigl" target="actors.Actor">
+      <point x="70.00000000000023" y="-71.5" />
+      <point x="2944.0000000000005" y="535.0" />
+      <point x="2556.6486235119046" y="535.0" />
+      <point x="36.266666666666424" y="149.5" />
+    </edge>
+    <edge source="actors.Poodle" target="interfaces.Teller">
+      <point x="-93.33333333333348" y="-82.5" />
+      <point x="1579.6666666666667" y="595.0" />
+      <point x="1108.7708333333335" y="595.0" />
+      <point x="18.9375" y="27.0" />
+    </edge>
+    <edge source="actors.TVpresenter" target="actors.Actor">
+      <point x="76.5" y="-71.5" />
+      <point x="3872.5" y="475.0" />
+      <point x="2611.0486235119047" y="475.0" />
+      <point x="90.66666666666652" y="149.5" />
+    </edge>
+    <edge source="actors.Pschigl" target="interfaces.Output">
+      <point x="-69.99999999999977" y="-71.5" />
+      <point x="2804.0000000000005" y="545.0" />
+      <point x="2038.1428571428573" y="545.0" />
+      <point x="54.28571428571422" y="71.0" />
+    </edge>
+    <edge source="actors.Brechson" target="actors.Actor">
+      <point x="97.0" y="-82.5" />
+      <point x="826.5" y="695.0" />
+      <point x="2429.7152901785716" y="695.0" />
+      <point x="-90.66666666666652" y="149.5" />
+    </edge>
+    <edge source="actors.Poodle" target="actors.Actor">
+      <point x="93.33333333333348" y="-82.5" />
+      <point x="1766.3333333333337" y="725.0" />
+      <point x="2484.1152901785713" y="725.0" />
+      <point x="-36.26666666666688" y="149.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.40000000000000013" x="1454.9999999999995" y="517.7499999999998" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
